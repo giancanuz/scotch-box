@@ -12,3 +12,9 @@ Vagrant.configure("2") do |config|
     #config.vm.synced_folder ".", "/var/www", :nfs => { :mount_options => ["dmode=777","fmode=666"] }
 
 end
+
+config.push.define "sftp" do |push|
+  push.host = "192.168.33.10"
+  push.username = "vagrant"
+  push.password = "vagrant"
+end
